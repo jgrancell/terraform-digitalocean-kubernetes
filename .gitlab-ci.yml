@@ -1,0 +1,10 @@
+---
+variables:
+  TERRAFORM_MODULE_NAME: digitalocean-dns
+  TERRAFORM_MODULE_SYSTEM: digitalocean
+
+include:
+  - project: 'grancell/cicd/terraform'
+    ref: main
+    file:
+      - '/module.yaml'
