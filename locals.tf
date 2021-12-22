@@ -33,6 +33,6 @@ locals {
     disk          = "desc"
   }
 
-  admin_yaml  = yamldecode(file("../../../admin-ips.yaml"))
-  admin_ips = local.admin_yaml["ips"]
+  admin_ips_string = var.admin_ips
+  admin_ips        = split(",", local.admin_ips_string)
 }

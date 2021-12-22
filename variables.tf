@@ -1,3 +1,8 @@
+variable "admin_ips" {
+  description = "Comma-delineated list of IPs to allow admin access through the firewall"
+  type        = string
+}
+
 variable "customer_group" {
   description = "The customer group we're assigning this cluster to."
   type        = string
